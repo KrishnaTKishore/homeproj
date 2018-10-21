@@ -48,7 +48,7 @@ namespace homeproj
 					Result.Clear();
 
 			Result.Text=Result.Text+1;
-			a[i] = 1;
+			a[i] = a[i] * 10 + 1;
 			
 		}
 
@@ -59,7 +59,7 @@ namespace homeproj
 					Result.Clear();
 
 			Result.Text = Result.Text + 2;
-			a[i] = 2;
+			a[i] =a[i]*10+ 2;
 			
 
 		}
@@ -71,7 +71,7 @@ namespace homeproj
 
 
 			Result.Text = Result.Text + 3;
-			a[i] = 3;
+			a[i] = a[i] * 10 + 3;
 			
 		}
 
@@ -82,7 +82,7 @@ namespace homeproj
 					Result.Clear();
 
 			Result.Text = Result.Text + 4;
-			a[i] = 4;
+			a[i] = a[i] * 10 + 4;
 		
 		}
 
@@ -92,7 +92,7 @@ namespace homeproj
 				Result.Clear();
 			
 				Result.Text = Result.Text + 5;
-			a[i] = 5;
+			a[i] = a[i] * 10 + 5;
 			
 		}
 
@@ -120,6 +120,12 @@ namespace homeproj
 			
 			a[0] = tot;
 			i = 0;j = 0;
+            int k = 1;
+           while(k<9)
+            {
+                a[k] = 0;
+               k++;
+            }
 			Result.Text =Convert.ToString(tot);
 			tot = 0;
 		}
