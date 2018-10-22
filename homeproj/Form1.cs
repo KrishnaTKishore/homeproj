@@ -103,16 +103,20 @@ namespace homeproj
 			{
 				if (op[y] == '+')
 				{
-					tot += a[y] + a[y + 1];
-					
-					
+                    tot += a[y];
+                    
+                    if (op[y + 1] != '+' || op[y+1] != '-')
+                        tot += a[y + 1];
+                
 				}
 				else if (op[y] == '-')
 				{
-					tot += a[y] - a[y + 1];
-					
-					
-				}
+                    tot += a[y] - a[y + 1];
+
+                    if (op[y + 1] != '+' || op[y + 1] != '-')
+                        tot -= a[y + 1];
+
+                }
 				else
 					Result.Text ="0";
 			}
